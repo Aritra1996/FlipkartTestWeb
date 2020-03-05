@@ -47,9 +47,9 @@ DesiredCapabilities capabilities;
 	@BeforeClass
 	public void beforeclass() {
 		try {
-			//Use "./chromedriver --port=9515 --whitelisted-ips=192.168.43.228"
+			//Use "./chromedriver --port=9515 --whitelisted-ips=192.168.43.228" Here give IP of the internet
 			// Set Properties
-			System.out.println("Start");
+			System.out.println("Start test");
 			gm = new GeneralMethods();
 			long starttime = System.currentTimeMillis();
 			startTimeString = String.valueOf(starttime);
