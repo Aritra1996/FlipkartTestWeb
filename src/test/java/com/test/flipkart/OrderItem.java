@@ -3,6 +3,8 @@ package com.test.flipkart;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -10,9 +12,14 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -45,13 +52,13 @@ DesiredCapabilities capabilities;
 			long starttime = System.currentTimeMillis();
 			startTimeString = String.valueOf(starttime);
 			report = new ExtentReports("src/test/resources/reports"+"/FlipkartTestWeb" + startTimeString + "/" + "ExtentReport.html");
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
-			driver = new ChromeDriver();
+			//System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+			driver = new RemoteWebDriver(new URL("http://127.0.0.1:9515"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 			hp = new HomePage(driver);
 			ip = new ItemPage(driver);
 		} catch (Exception e) {
-			test.log(LogStatus.FAIL, e);
+			e.printStackTrace();
 		}
 
 	}
@@ -62,7 +69,7 @@ DesiredCapabilities capabilities;
 			report.flush();
 			driver.quit();
 		} catch (Exception e) {
-			test.log(LogStatus.FAIL, e);
+			e.printStackTrace();
 		}
 
 	}
