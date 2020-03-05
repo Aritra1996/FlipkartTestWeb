@@ -53,6 +53,7 @@ DesiredCapabilities capabilities;
 			startTimeString = String.valueOf(starttime);
 			report = new ExtentReports("src/test/resources/reports"+"/FlipkartTestWeb" + startTimeString + "/" + "ExtentReport.html");
 			//System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver");
+			//driver = new RemoteWebDriver(new URL("http://192.168.43.228:9515/wd/hub"), DesiredCapabilities.chrome());
 			driver = new RemoteWebDriver(new URL("http://jenkins.mydomain:4444/wd/hub"), DesiredCapabilities.chrome());
 			driver.manage().window().maximize();
 			hp = new HomePage(driver);
