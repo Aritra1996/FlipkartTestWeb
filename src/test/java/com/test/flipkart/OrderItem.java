@@ -49,6 +49,7 @@ DesiredCapabilities capabilities;
 		try {
 			//Use "./chromedriver --port=9515 --whitelisted-ips=192.168.43.228"
 			// Set Properties
+			System.out.println("Start");
 			gm = new GeneralMethods();
 			long starttime = System.currentTimeMillis();
 			startTimeString = String.valueOf(starttime);
