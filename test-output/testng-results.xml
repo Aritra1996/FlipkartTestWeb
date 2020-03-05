@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-03-04T16:49:21 IST" name="Suite" finished-at="2020-03-04T16:49:51 IST" duration-ms="29294">
+    <groups>
+    </groups>
+    <test started-at="2020-03-04T16:49:21 IST" name="Test" finished-at="2020-03-04T16:49:51 IST" duration-ms="29294">
+      <class name="com.test.flipkart.OrderItem">
+        <test-method is-config="true" signature="beforeclass()[pri:0, instance:com.test.flipkart.OrderItem@327b636c]" started-at="2020-03-04T16:49:21 IST" name="beforeclass" finished-at="2020-03-04T16:49:24 IST" duration-ms="2536" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeclass -->
+        <test-method signature="openFlipkart()[pri:0, instance:com.test.flipkart.OrderItem@327b636c]" started-at="2020-03-04T16:49:24 IST" name="openFlipkart" finished-at="2020-03-04T16:49:31 IST" duration-ms="6994" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openFlipkart -->
+        <test-method signature="searchItem()[pri:0, instance:com.test.flipkart.OrderItem@327b636c]" started-at="2020-03-04T16:49:31 IST" name="searchItem" finished-at="2020-03-04T16:49:38 IST" duration-ms="7003" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchItem -->
+        <test-method signature="buyItem()[pri:0, instance:com.test.flipkart.OrderItem@327b636c]" started-at="2020-03-04T16:49:38 IST" name="buyItem" finished-at="2020-03-04T16:49:50 IST" duration-ms="12478" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- buyItem -->
+        <test-method is-config="true" signature="afterclass()[pri:0, instance:com.test.flipkart.OrderItem@327b636c]" started-at="2020-03-04T16:49:50 IST" name="afterclass" finished-at="2020-03-04T16:49:51 IST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterclass -->
+      </class> <!-- com.test.flipkart.OrderItem -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
